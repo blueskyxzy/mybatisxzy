@@ -51,7 +51,7 @@ public class MyExcutor implements Excutor{
 
     private Connection getConnection() {
         try {
-            Connection connection =xmlConfiguration.build("config.xml");
+            Connection connection =xmlConfiguration.build("database.xml");
             return connection;
         } catch (Exception e) {
             e.printStackTrace();
