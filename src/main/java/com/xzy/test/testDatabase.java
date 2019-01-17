@@ -29,9 +29,9 @@ public class testDatabase {
             User u=new User();
             //遍历结果集
             while(set.next()){
-                u.setId(Long.parseLong(set.getString(1)));
-                u.setName(set.getString(2));
-                u.setPassword(set.getString(3));
+                u.setId(Long.parseLong(set.getString("id")));
+                u.setName(set.getString("name"));
+                u.setPassword(set.getString("password"));
             }
             System.out.println("result user:" + u.toString());
         } catch (Exception e) {
