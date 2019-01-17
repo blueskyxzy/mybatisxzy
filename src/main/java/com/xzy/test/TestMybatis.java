@@ -11,9 +11,15 @@ public class TestMybatis {
 
     public static void main(String[] args){
         System.out.println("test mybatis");
-        MySqlSession sqlSession=new MySqlSession();
-        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        User user = mapper.getUserById(1L);
-        System.out.println(user);
+        try {
+            MySqlSession sqlSession=new MySqlSession();
+            UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+            User user = mapper.getUserById(1L);
+            System.out.println(user.toString());
+        } catch (Exception e){
+            e.printStackTrace();
+            System.out.println("catch an exception:" + e);
+        }
+
     }
 }
