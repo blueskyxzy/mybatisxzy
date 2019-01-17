@@ -1,6 +1,7 @@
 package com.xzy.framworkofmybatis;
 
 import com.xzy.bean.User;
+import com.xzy.test.testDatabase;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
