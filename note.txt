@@ -1,0 +1,10 @@
+要点：
+1.Proxy动态代理
+2.读取xml配置
+3.jdbc连接操作数据库
+
+Configuration定义了读取mapper.xml和database.xml的方法
+SqlSession定义了获取动态代理对象和执行Excute的方法。保存Excute和Configuration的引用
+Excute调用jdbc操作数据库，利用Configuration引用读取database.xml，遍历结果集
+
+SqlSession获取MapperProxy代理对象接口，动态代理对象MapperProxy，proxy读取Mapper.xml配置并调用excute对象执行查询数据库
