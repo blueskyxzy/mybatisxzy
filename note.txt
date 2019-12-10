@@ -8,3 +8,8 @@ SqlSession定义了获取动态代理对象和执行Excute的方法。保存Excu
 Excute调用jdbc操作数据库，利用Configuration引用读取database.xml，遍历结果集
 
 SqlSession获取MapperProxy代理对象接口，动态代理对象MapperProxy，proxy读取Mapper.xml配置并调用excute对象执行查询数据库
+
+用的是java自带的代理，必须是对接口代理，实现自己写在invoke方法
+
+
+mybatis

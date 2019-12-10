@@ -1,8 +1,13 @@
 package com.xzy.bean;
 
+import lombok.Data;
+
+import java.util.Date;
+
 /**
  * created by xzy on 2019/1/15
  */
+@Data
 public class User {
 
     private Long id;
@@ -11,36 +16,10 @@ public class User {
 
     private String password;
 
-    public Long getId() {
-        return id;
-    }
+    private String mobile;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private Date createTime;
 
-    public String getName() {
-        return name;
-    }
+    private Date updateTime;
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
 }
